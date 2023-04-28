@@ -67,7 +67,7 @@ for x in range (0,10):
     user_loc[x,0]=sprawn[chosen_loc[x],0]
     user_loc[x,1]=sprawn[chosen_loc[x],1]
 duration=10 #sampling duration (1/sampling rate)
-T_time=180
+T_time=10
 counter=10
 all_loc=np.zeros((duration*T_time*10,2),dtype=float)
 direction=np.zeros(10,dtype=int)
@@ -286,5 +286,6 @@ print("Accessible area accuracy: ",float(true_positive/positive))
 print("Obstacle area accuracy: ",float(true_negative/negative))
 print("Total accuracy: ",float((true_positive+true_negative)/(positive+negative)))
 plt.imshow(grid,cmap='Blues',origin='lower')
+np.save("result.npy",grid)
 plt.show()
 
