@@ -228,7 +228,7 @@ threshold_val=1.3
 for x in range (0,duration*15*T_time):
     if x%100==0:
         print(x)
-    for y in range (x,duration*10*T_time):
+    for y in range (x,duration*15*T_time):
         check=ABS_Dist(all_loc[x,0],all_loc[y,0],all_loc[x,1],all_loc[y,1])
         if check<(threshold_val*2/duration):
             #print(check,all_loc[x],all_loc[y])
